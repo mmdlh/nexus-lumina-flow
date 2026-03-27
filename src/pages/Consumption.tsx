@@ -55,7 +55,7 @@ export default function Consumption() {
 
       <div className="grid grid-cols-5 gap-4">
         <div className="col-span-3 chart-container glow-border">
-          <h3 className="text-sm font-medium text-muted-foreground mb-4">每日多维能耗趋势</h3>
+          <h3 className="chart-title">每日多维能耗趋势</h3>
           <ResponsiveContainer width="100%" height={280}>
             <LineChart data={dailyData}>
               <CartesianGrid strokeDasharray="3 3" stroke="hsl(210,30%,18%)" />
@@ -70,7 +70,7 @@ export default function Consumption() {
         </div>
 
         <div className="col-span-2 chart-container glow-border">
-          <h3 className="text-sm font-medium text-muted-foreground mb-4">能耗分类矩阵</h3>
+          <h3 className="chart-title">能耗分类矩阵</h3>
           <ResponsiveContainer width="100%" height={280}>
             <Treemap data={treemapData} dataKey="size" aspectRatio={4 / 3} content={<CustomTreemapContent />} />
           </ResponsiveContainer>
@@ -78,7 +78,7 @@ export default function Consumption() {
       </div>
 
       <div className="chart-container glow-border">
-        <h3 className="text-sm font-medium text-muted-foreground mb-4">各楼宇用电月度对比</h3>
+        <h3 className="chart-title">各楼宇用电月度对比</h3>
         <ResponsiveContainer width="100%" height={280}>
           <BarChart data={buildingData} layout="vertical">
             <CartesianGrid strokeDasharray="3 3" stroke="hsl(210,30%,18%)" />

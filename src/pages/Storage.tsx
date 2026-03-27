@@ -40,7 +40,7 @@ export default function Storage() {
 
       <div className="grid grid-cols-5 gap-4">
         <div className="col-span-3 chart-container glow-border">
-          <h3 className="text-sm font-medium text-muted-foreground mb-4">储能SOC与充放电功率 (48h)</h3>
+          <h3 className="chart-title">储能SOC与充放电功率 (48h)</h3>
           <ResponsiveContainer width="100%" height={300}>
             <AreaChart data={socData}>
               <defs>
@@ -62,7 +62,7 @@ export default function Storage() {
         </div>
 
         <div className="col-span-2 chart-container glow-border">
-          <h3 className="text-sm font-medium text-muted-foreground mb-4">各站点实时SOC</h3>
+          <h3 className="chart-title">各站点实时SOC</h3>
           <ResponsiveContainer width="100%" height={300}>
             <RadialBarChart cx="50%" cy="50%" innerRadius="15%" outerRadius="85%" data={stationData} startAngle={180} endAngle={-180}>
               <RadialBar background={{ fill: 'hsl(210,30%,15%)' }} dataKey="soc" cornerRadius={5} />
@@ -82,7 +82,7 @@ export default function Storage() {
 
       <div className="grid grid-cols-2 gap-4">
         <div className="chart-container glow-border">
-          <h3 className="text-sm font-medium text-muted-foreground mb-4">月度循环与健康度</h3>
+          <h3 className="chart-title">月度循环与健康度</h3>
           <ResponsiveContainer width="100%" height={250}>
             <BarChart data={cycleData}>
               <CartesianGrid strokeDasharray="3 3" stroke="hsl(210,30%,18%)" />
@@ -97,7 +97,7 @@ export default function Storage() {
         </div>
 
         <div className="chart-container glow-border">
-          <h3 className="text-sm font-medium text-muted-foreground mb-4">峰谷套利策略</h3>
+          <h3 className="chart-title">峰谷套利策略</h3>
           <ResponsiveContainer width="100%" height={250}>
             <BarChart data={economicData}>
               <CartesianGrid strokeDasharray="3 3" stroke="hsl(210,30%,18%)" />

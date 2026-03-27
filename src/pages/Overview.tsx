@@ -99,7 +99,7 @@ export default function Overview() {
       {/* Charts Row 1 */}
       <div className="grid grid-cols-3 gap-4">
         <div className="col-span-2 chart-container glow-border">
-          <h3 className="text-sm font-medium text-muted-foreground mb-4">24小时多能源趋势</h3>
+          <h3 className="chart-title">24小时多能源趋势</h3>
           <ResponsiveContainer width="100%" height={280}>
             <AreaChart data={areaData}>
               <defs>
@@ -129,7 +129,7 @@ export default function Overview() {
         </div>
 
         <div className="chart-container glow-border">
-          <h3 className="text-sm font-medium text-muted-foreground mb-4">能源结构占比</h3>
+          <h3 className="chart-title">能源结构占比</h3>
           <ResponsiveContainer width="100%" height={240}>
             <PieChart>
               <Pie data={pieData} cx="50%" cy="50%" innerRadius={55} outerRadius={95} dataKey="value" stroke="none">
@@ -152,7 +152,7 @@ export default function Overview() {
       {/* Charts Row 2 - 3 columns */}
       <div className="grid grid-cols-3 gap-4">
         <div className="chart-container glow-border">
-          <h3 className="text-sm font-medium text-muted-foreground mb-4">本周峰谷负荷</h3>
+          <h3 className="chart-title">本周峰谷负荷</h3>
           <ResponsiveContainer width="100%" height={230}>
             <ComposedChart data={weeklyPeak}>
               <CartesianGrid strokeDasharray="3 3" stroke="hsl(210,30%,18%)" />
@@ -167,7 +167,7 @@ export default function Overview() {
         </div>
 
         <div className="chart-container glow-border">
-          <h3 className="text-sm font-medium text-muted-foreground mb-4">综合能效趋势</h3>
+          <h3 className="chart-title">综合能效趋势</h3>
           <ResponsiveContainer width="100%" height={230}>
             <LineChart data={efficiencyTrend}>
               <CartesianGrid strokeDasharray="3 3" stroke="hsl(210,30%,18%)" />
@@ -181,7 +181,7 @@ export default function Overview() {
         </div>
 
         <div className="chart-container glow-border">
-          <h3 className="text-sm font-medium text-muted-foreground mb-4">能源系统健康雷达</h3>
+          <h3 className="chart-title">能源系统健康雷达</h3>
           <ResponsiveContainer width="100%" height={230}>
             <RadarChart data={radarData}>
               <PolarGrid stroke="hsl(210,30%,18%)" />
@@ -196,7 +196,7 @@ export default function Overview() {
       {/* Charts Row 3 */}
       <div className="grid grid-cols-3 gap-4">
         <div className="chart-container glow-border">
-          <h3 className="text-sm font-medium text-muted-foreground mb-4">月度发用电对比</h3>
+          <h3 className="chart-title">月度发用电对比</h3>
           <ResponsiveContainer width="100%" height={240}>
             <BarChart data={barData}>
               <CartesianGrid strokeDasharray="3 3" stroke="hsl(210,30%,18%)" />
@@ -211,7 +211,7 @@ export default function Overview() {
         </div>
 
         <div className="chart-container glow-border">
-          <h3 className="text-sm font-medium text-muted-foreground mb-4">区域电网负荷率</h3>
+          <h3 className="chart-title">区域电网负荷率</h3>
           <ResponsiveContainer width="100%" height={240}>
             <BarChart data={regionCompare} layout="vertical">
               <CartesianGrid strokeDasharray="3 3" stroke="hsl(210,30%,18%)" />
@@ -226,7 +226,7 @@ export default function Overview() {
 
         {/* Real-time events */}
         <div className="chart-container glow-border">
-          <h3 className="text-sm font-medium text-muted-foreground mb-4">实时运行动态</h3>
+          <h3 className="chart-title">实时运行动态</h3>
           <div className="space-y-2 max-h-[220px] overflow-y-auto pr-1">
             {realtimeEvents.map((ev, i) => (
               <div key={i} className="flex items-start gap-2.5 py-1.5 border-b border-border/30 last:border-0">
