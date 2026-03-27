@@ -1,4 +1,5 @@
 import { useLocation, useNavigate } from "react-router-dom";
+import energyBg from "@/assets/energy-bg.jpg";
 
 const leftNav = [
   { label: "综合概览", path: "/" },
@@ -19,15 +20,11 @@ export default function EnergyLayout({ children }: { children: React.ReactNode }
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-background relative overflow-hidden">
-      {/* Background effects */}
-      <div className="fixed inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full opacity-[0.03]" 
-          style={{ background: 'radial-gradient(circle, hsl(195 100% 50%), transparent)' }} />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 rounded-full opacity-[0.03]" 
-          style={{ background: 'radial-gradient(circle, hsl(160 100% 45%), transparent)' }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full opacity-[0.02]" 
-          style={{ background: 'radial-gradient(circle, hsl(270 80% 60%), transparent)' }} />
+    <div className="min-h-screen relative overflow-hidden">
+      {/* Background image */}
+      <div className="fixed inset-0">
+        <img src={energyBg} alt="" className="w-full h-full object-cover" />
+        <div className="absolute inset-0" style={{ background: 'hsl(220 25% 6% / 0.55)' }} />
       </div>
 
       {/* Header */}
