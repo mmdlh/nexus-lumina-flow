@@ -48,7 +48,7 @@ export default function Alerts() {
       <div className="grid grid-cols-3 gap-4">
         {/* Live alerts list */}
         <div className="chart-container glow-border">
-          <h3 className="text-sm font-medium text-muted-foreground mb-4">实时告警列表</h3>
+          <h3 className="chart-title">实时告警列表</h3>
           <div className="space-y-2 max-h-[340px] overflow-y-auto pr-1">
             {activeAlerts.map((alert) => (
               <div key={alert.id} className="glass-panel p-3 flex items-start gap-3 animate-pulse-glow" style={{ animationDelay: `${alert.id * 0.3}s` }}>
@@ -68,7 +68,7 @@ export default function Alerts() {
         </div>
 
         <div className="col-span-2 chart-container glow-border">
-          <h3 className="text-sm font-medium text-muted-foreground mb-4">30日告警趋势</h3>
+          <h3 className="chart-title">30日告警趋势</h3>
           <ResponsiveContainer width="100%" height={340}>
             <BarChart data={alertTrend}>
               <CartesianGrid strokeDasharray="3 3" stroke="hsl(210,30%,18%)" />
@@ -85,7 +85,7 @@ export default function Alerts() {
 
       <div className="grid grid-cols-2 gap-4">
         <div className="chart-container glow-border">
-          <h3 className="text-sm font-medium text-muted-foreground mb-4">告警类型分布</h3>
+          <h3 className="chart-title">告警类型分布</h3>
           <ResponsiveContainer width="100%" height={250}>
             <PieChart>
               <Pie data={alertTypeData} cx="50%" cy="50%" outerRadius={90} dataKey="value" label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`} labelLine={{ stroke: 'hsl(210,20%,40%)' }} fontSize={10}>
@@ -97,7 +97,7 @@ export default function Alerts() {
         </div>
 
         <div className="chart-container glow-border">
-          <h3 className="text-sm font-medium text-muted-foreground mb-4">月度平均响应时间</h3>
+          <h3 className="chart-title">月度平均响应时间</h3>
           <ResponsiveContainer width="100%" height={250}>
             <LineChart data={responseTime}>
               <CartesianGrid strokeDasharray="3 3" stroke="hsl(210,30%,18%)" />

@@ -41,7 +41,7 @@ export default function PowerAnalysis() {
 
       <div className="grid grid-cols-5 gap-4">
         <div className="col-span-3 chart-container glow-border">
-          <h3 className="text-sm font-medium text-muted-foreground mb-4">实时负荷 vs 预测负荷 (48h)</h3>
+          <h3 className="chart-title">实时负荷 vs 预测负荷 (48h)</h3>
           <ResponsiveContainer width="100%" height={300}>
             <LineChart data={hourlyLoad}>
               <CartesianGrid strokeDasharray="3 3" stroke="hsl(210,30%,18%)" />
@@ -55,7 +55,7 @@ export default function PowerAnalysis() {
         </div>
 
         <div className="col-span-2 chart-container glow-border">
-          <h3 className="text-sm font-medium text-muted-foreground mb-4">电网频率实时监控</h3>
+          <h3 className="chart-title">电网频率实时监控</h3>
           <ResponsiveContainer width="100%" height={300}>
             <AreaChart data={frequencyData}>
               <defs>
@@ -76,7 +76,7 @@ export default function PowerAnalysis() {
 
       <div className="grid grid-cols-2 gap-4">
         <div className="chart-container glow-border">
-          <h3 className="text-sm font-medium text-muted-foreground mb-4">三相电压30日监测</h3>
+          <h3 className="chart-title">三相电压30日监测</h3>
           <ResponsiveContainer width="100%" height={250}>
             <LineChart data={voltageData}>
               <CartesianGrid strokeDasharray="3 3" stroke="hsl(210,30%,18%)" />
@@ -91,7 +91,7 @@ export default function PowerAnalysis() {
         </div>
 
         <div className="chart-container glow-border">
-          <h3 className="text-sm font-medium text-muted-foreground mb-4">区域发用电对比</h3>
+          <h3 className="chart-title">区域发用电对比</h3>
           <ResponsiveContainer width="100%" height={250}>
             <ComposedChart data={regionData}>
               <CartesianGrid strokeDasharray="3 3" stroke="hsl(210,30%,18%)" />

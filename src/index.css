@@ -200,6 +200,23 @@
     @apply glass-panel p-5;
   }
 
+  .chart-title {
+    @apply text-sm font-semibold mb-4 tracking-wide;
+    color: hsl(var(--foreground));
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .chart-title::before {
+    content: '';
+    display: inline-block;
+    width: 3px;
+    height: 14px;
+    border-radius: 2px;
+    background: linear-gradient(180deg, hsl(var(--energy-cyan)), hsl(var(--energy-green)));
+    box-shadow: 0 0 6px hsl(var(--energy-cyan) / 0.5);
+  }
+
   .data-grid {
     display: grid;
     gap: 1rem;

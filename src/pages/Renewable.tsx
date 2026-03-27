@@ -40,7 +40,7 @@ export default function Renewable() {
 
       <div className="grid grid-cols-2 gap-4">
         <div className="chart-container glow-border">
-          <h3 className="text-sm font-medium text-muted-foreground mb-4">光伏日出力曲线</h3>
+          <h3 className="chart-title">光伏日出力曲线</h3>
           <ResponsiveContainer width="100%" height={280}>
             <AreaChart data={solarData}>
               <defs>
@@ -59,7 +59,7 @@ export default function Renewable() {
         </div>
 
         <div className="chart-container glow-border">
-          <h3 className="text-sm font-medium text-muted-foreground mb-4">风电48h出力曲线</h3>
+          <h3 className="chart-title">风电48h出力曲线</h3>
           <ResponsiveContainer width="100%" height={280}>
             <AreaChart data={windData}>
               <defs>
@@ -80,7 +80,7 @@ export default function Renewable() {
 
       <div className="grid grid-cols-3 gap-4">
         <div className="col-span-2 chart-container glow-border">
-          <h3 className="text-sm font-medium text-muted-foreground mb-4">月度新能源发电量</h3>
+          <h3 className="chart-title">月度新能源发电量</h3>
           <ResponsiveContainer width="100%" height={260}>
             <BarChart data={monthlyNew}>
               <CartesianGrid strokeDasharray="3 3" stroke="hsl(210,30%,18%)" />
@@ -96,7 +96,7 @@ export default function Renewable() {
         </div>
 
         <div className="chart-container glow-border">
-          <h3 className="text-sm font-medium text-muted-foreground mb-4">装机利用率</h3>
+          <h3 className="chart-title">装机利用率</h3>
           <ResponsiveContainer width="100%" height={260}>
             <RadialBarChart cx="50%" cy="50%" innerRadius="20%" outerRadius="90%" data={capacityData} startAngle={180} endAngle={-180}>
               <RadialBar background={{ fill: 'hsl(210,30%,15%)' }} dataKey="value" cornerRadius={5} />

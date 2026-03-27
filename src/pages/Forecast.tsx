@@ -41,7 +41,7 @@ export default function Forecast() {
       </div>
 
       <div className="chart-container glow-border">
-        <h3 className="text-sm font-medium text-muted-foreground mb-4">72小时负荷预测 (含置信区间)</h3>
+        <h3 className="chart-title">72小时负荷预测 (含置信区间)</h3>
         <ResponsiveContainer width="100%" height={320}>
           <AreaChart data={forecastData}>
             <defs>
@@ -65,7 +65,7 @@ export default function Forecast() {
 
       <div className="grid grid-cols-3 gap-4">
         <div className="chart-container glow-border">
-          <h3 className="text-sm font-medium text-muted-foreground mb-4">预测准确率 (30日)</h3>
+          <h3 className="chart-title">预测准确率 (30日)</h3>
           <ResponsiveContainer width="100%" height={240}>
             <BarChart data={accuracyData}>
               <CartesianGrid strokeDasharray="3 3" stroke="hsl(210,30%,18%)" />
@@ -82,7 +82,7 @@ export default function Forecast() {
         </div>
 
         <div className="chart-container glow-border">
-          <h3 className="text-sm font-medium text-muted-foreground mb-4">工作日 vs 周末负荷模式</h3>
+          <h3 className="chart-title">工作日 vs 周末负荷模式</h3>
           <ResponsiveContainer width="100%" height={240}>
             <LineChart data={peakData}>
               <CartesianGrid strokeDasharray="3 3" stroke="hsl(210,30%,18%)" />
@@ -97,7 +97,7 @@ export default function Forecast() {
         </div>
 
         <div className="chart-container glow-border">
-          <h3 className="text-sm font-medium text-muted-foreground mb-4">温度-负荷相关性</h3>
+          <h3 className="chart-title">温度-负荷相关性</h3>
           <ResponsiveContainer width="100%" height={240}>
             <ScatterChart>
               <CartesianGrid strokeDasharray="3 3" stroke="hsl(210,30%,18%)" />

@@ -50,7 +50,7 @@ export default function Carbon() {
 
       <div className="grid grid-cols-2 gap-4">
         <div className="chart-container glow-border">
-          <h3 className="text-sm font-medium text-muted-foreground mb-4">月度碳排放趋势与配额</h3>
+          <h3 className="chart-title">月度碳排放趋势与配额</h3>
           <ResponsiveContainer width="100%" height={300}>
             <AreaChart data={yearlyCarbon}>
               <defs>
@@ -72,7 +72,7 @@ export default function Carbon() {
         </div>
 
         <div className="chart-container glow-border">
-          <h3 className="text-sm font-medium text-muted-foreground mb-4">碳交易市场 (30日)</h3>
+          <h3 className="chart-title">碳交易市场 (30日)</h3>
           <ResponsiveContainer width="100%" height={300}>
             <BarChart data={tradingData}>
               <CartesianGrid strokeDasharray="3 3" stroke="hsl(210,30%,18%)" />
@@ -89,7 +89,7 @@ export default function Carbon() {
 
       <div className="grid grid-cols-3 gap-4">
         <div className="chart-container glow-border">
-          <h3 className="text-sm font-medium text-muted-foreground mb-4">行业碳排放占比</h3>
+          <h3 className="chart-title">行业碳排放占比</h3>
           <ResponsiveContainer width="100%" height={250}>
             <PieChart>
               <Pie data={sectorData} cx="50%" cy="50%" outerRadius={90} dataKey="value" label={({ name, value }) => `${name} ${value}%`} labelLine={{ stroke: 'hsl(210,20%,40%)' }} fontSize={10}>
@@ -101,7 +101,7 @@ export default function Carbon() {
         </div>
 
         <div className="col-span-2 chart-container glow-border">
-          <h3 className="text-sm font-medium text-muted-foreground mb-4">碳中和路径规划 (2020-2030)</h3>
+          <h3 className="chart-title">碳中和路径规划 (2020-2030)</h3>
           <ResponsiveContainer width="100%" height={250}>
             <BarChart data={reductionPlan}>
               <CartesianGrid strokeDasharray="3 3" stroke="hsl(210,30%,18%)" />
