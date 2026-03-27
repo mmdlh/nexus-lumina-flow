@@ -38,12 +38,12 @@ export default function EnergyLayout({ children }: { children: React.ReactNode }
         <div className="shimmer-line top-0" />
         <div className="max-w-[1600px] mx-auto px-4 py-3 flex items-center justify-between">
           {/* Left Nav */}
-          <nav className="flex items-center gap-1">
+          <nav className="flex items-center gap-2">
             {leftNav.map((item) => (
               <button
                 key={item.path}
                 onClick={() => navigate(item.path)}
-                className={`nav-item ${location.pathname === item.path ? "active" : ""}`}
+                className={`nav-item px-5 py-2.5 text-base ${location.pathname === item.path ? "active" : ""}`}
               >
                 {item.label}
               </button>
@@ -51,22 +51,22 @@ export default function EnergyLayout({ children }: { children: React.ReactNode }
           </nav>
 
           {/* Center Title */}
-          <div className="flex flex-col items-center px-6">
-            <h1 className="font-display text-xl md:text-2xl font-bold tracking-widest energy-gradient-text whitespace-nowrap">
+          <div className="flex flex-col items-center px-10">
+            <h1 className="font-display text-2xl md:text-4xl font-bold tracking-[0.15em] energy-gradient-text whitespace-nowrap">
               能源分析预测平台
             </h1>
-            <div className="text-[10px] tracking-[0.3em] text-muted-foreground mt-0.5 font-display">
+            <div className="text-[11px] tracking-[0.4em] text-muted-foreground mt-1 font-display">
               ENERGY ANALYTICS PLATFORM
             </div>
           </div>
 
           {/* Right Nav */}
-          <nav className="flex items-center gap-1">
+          <nav className="flex items-center gap-2">
             {rightNav.map((item) => (
               <button
                 key={item.path}
                 onClick={() => navigate(item.path)}
-                className={`nav-item ${location.pathname === item.path ? "active" : ""}`}
+                className={`nav-item px-5 py-2.5 text-base ${location.pathname === item.path ? "active" : ""}`}
               >
                 {item.label}
               </button>
