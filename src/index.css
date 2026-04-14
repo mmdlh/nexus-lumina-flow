@@ -79,8 +79,8 @@
     @apply rounded-xl border;
     background: linear-gradient(
       135deg,
-      hsl(var(--glass-bg) / 0.7),
-      hsl(var(--glass-bg) / 0.4)
+      hsl(var(--glass-bg) / 0.45),
+      hsl(var(--glass-bg) / 0.25)
     );
     border-color: hsl(var(--glass-border) / 0.5);
     backdrop-filter: blur(16px);
