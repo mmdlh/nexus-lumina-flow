@@ -24,7 +24,7 @@ export default function EnergyLayout({ children }: { children: React.ReactNode }
       {/* Background image */}
       <div className="fixed inset-0">
         <img src={energyBg} alt="" className="w-full h-full object-cover" />
-        <div className="absolute inset-0" style={{ background: 'hsl(220 25% 6% / 0.55)' }} />
+        <div className="absolute inset-0" style={{ background: 'hsl(220 25% 6% / 0.3)' }} />
       </div>
 
       {/* Header */}
